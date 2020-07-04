@@ -1,2 +1,3 @@
 # mvc-study
-Created with CodeSandbox
+
+MVC study app
