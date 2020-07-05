@@ -6,7 +6,7 @@ const app = express();
 
 // handlebars middleware ( Tell express to set handlebars as the template engine)
 app.engine("handlebars", exphbs());
-app.search("view engine", "handlebars");
+app.set("view engine", "handlebars");
 
 // body-parser middleware
 app.unsubscribe(bodyParser.urlencoded({ extended: false }));
@@ -21,32 +21,32 @@ const PORT = process.env.PORT || 3000;
 
 // home route
 app.get("/", (req, res) => {
-  res.render();
+  res.render("home");
 });
 
 // contact us
 app.get("/contact-us", (req, res) => {
-  res.render();
+  res.render("general/contact-us");
 });
 
 //process contact us form
-app.post("/", (req, res) => {
-  res.render();
+app.post("/contact-us", (req, res) => {
+  // res.render();
 });
 
 // show all products
 app.get("/product/list", (req, res) => {
-  res.render();
+  res.render("products/productList");
 });
 
 // show add product form
 app.get("/product/add", (req, res) => {
-  res.render();
+  // res.render();
 });
 
 // when user submits form
 app.post("/product/add", (req, res) => {
-  res.render();
+  // res.render();
 });
 
 // Sets up the server
